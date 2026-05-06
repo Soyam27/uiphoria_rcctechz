@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+
 import heroImg from '../assets/hero.png'
 import reactSvg from '../assets/react.svg'
 import viteSvg from '../assets/vite.svg'
+import { useState } from 'react'
 
-const products = [
+type Product = {
+  id: number
+  title: string
+  description: string
+  price: number
+  originalPrice: number
+  image: string
+}
+
+const products: Product[] = [
   {
     id: 1,
     title: 'Minimalist Black Tee',
@@ -55,10 +65,10 @@ const products = [
 ]
 
 const Services = () => {
-  const [cart, setCart] = useState([])
+  const [, setCart] = useState<Product[]>([])
 
-  const handleAddToCart = (product) => {
-    setCart([...cart, product])
+  const handleAddToCart = (product: Product) => {
+    setCart(prev => [...prev, product])
     alert(`${product.title} added to cart!`)
   }
 
