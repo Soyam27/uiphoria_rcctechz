@@ -7,7 +7,9 @@ const SiteLayout:FC<{children:ReactNode}> = ({children}) => {
   return (
     <>
     <Navbar/>
-    {children}
+    <div>
+      {children}
+    </div>
     <Footer/>
     </>
   )

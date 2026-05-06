@@ -76,21 +76,21 @@ const Services = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product) => (
-            <div key={product.id} className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition group">
+            <div key={product.id} className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition group" style={{marginLeft: '-6px', transform: 'skewY(-1deg)'}}>
               {/* Product Image Area */}
-              <div className="bg-white aspect-[4/3] flex items-center justify-center overflow-hidden">
-                <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+              <div className="bg-white aspect-[4/3] flex items-center justify-center overflow-hidden" style={{paddingTop: 0}}>
+                <img src={product.image} alt={product.title} className="w-full h-full object-cover" style={{opacity: 1}} />
               </div>
 
               {/* Product Details */}
               <div className="p-6">
-                <h3 className="text-lg font-bold text-black">{product.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{product.description}</p>
+                <h3 className="text-lg font-bold text-black typo-display">{product.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 typo-mono">{product.description}</p>
 
                 {/* Price */}
                 <div className="mt-4 flex items-center gap-3">
-                  <span className="text-2xl font-bold text-black">${product.price}</span>
-                  <span className="text-sm text-gray-400 line-through">${product.originalPrice}</span>
+                  <span className="text-2xl font-bold text-black typo-mono">${product.price}</span>
+                  <span className="text-sm text-gray-400 line-through typo-serif">${product.originalPrice}</span>
                 </div>
 
                 {/* Buttons */}

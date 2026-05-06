@@ -1,0 +1,70 @@
+/* Softened demo broken styles (mild, non-disruptive nudge) */
+:root {
+  --body-bg: #0f172a;
+  --text-main: #1f2937;
+  --accent: #ff7aa2;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  background: var(--body-bg);
+  color: var(--text-main);
+}
+
+/* Headings: small, non-disruptive stylistic nudge */
+h1, h2, h3, h4 {
+  color: var(--text-main);
+  text-transform: none;
+  transform: rotate(-1deg);
+}
+
+/* Links and buttons: keep accessible contrast but slightly off accent */
+a, button {
+  color: #0b3a5b;
+  background: transparent;
+  border-color: rgba(11,58,91,0.08);
+}
+
+/* Utility for mild misalignment */
+.overflow-break {
+  width: auto;
+  margin-left: -16px; /* small nudge to demonstrate misalignment */
+}
+
+/* Images return to normal rendering */
+img {
+  image-rendering: auto;
+}
+
+/* Subtle typography inconsistency classes for demos */
+.typo-serif {
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.typo-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New', monospace !important;
+}
+
+.typo-display {
+  font-family: 'Trebuchet MS', 'Arial Black', 'Impact', sans-serif !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Inconsistent scale: headings slightly different across breakpoints */
+@media (min-width: 768px) {
+  .typo-scale-h1 {
+    font-size: 2.6rem !important; /* slightly smaller than typical h1 */
+    line-height: 1.05 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .typo-scale-h1 {
+    font-size: 4.2rem !important; /* larger jump on wide screens to introduce inconsistency */
+  }
+}
+
+

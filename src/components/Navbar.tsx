@@ -2,20 +2,20 @@
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200" style={{transform: 'rotate(3deg)', transformOrigin: 'left center'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Brand */}
           <div className="flex items-center">
-            <span className="text-lg font-bold tracking-tight text-black">UIPHORIA</span>
+            <span className="text-lg font-bold tracking-tight text-black typo-display">UIPHORIA</span>
           </div>
 
           {/* Center Navigation */}
-          <nav className="hidden md:flex space-x-12">
-            <a href="#home" className="text-sm font-medium text-gray-700 hover:text-black transition">Home</a>
-            <a href="#shop" className="text-sm font-medium text-gray-700 hover:text-black transition">Shop</a>
-            <a href="#collections" className="text-sm font-medium text-gray-700 hover:text-black transition">Collections</a>
-            <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-black transition">Contact</a>
+          <nav className="hidden md:flex space-x-12" style={{transform: 'translateX(6px) rotate(1deg)'}}>
+            <a href="#home" className="text-sm font-medium text-gray-700 hover:text-black transition typo-serif">Home</a>
+            <a href="#shop" className="text-sm font-medium text-gray-700 hover:text-black transition typo-mono">Shop</a>
+            <a href="#collections" className="text-sm font-medium text-gray-700 hover:text-black transition typo-serif">Collections</a>
+            <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-black transition typo-mono">Contact</a>
           </nav>
 
           {/* Right Icons */}
